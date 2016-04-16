@@ -45,3 +45,4 @@ npm-debug.log
 # ignore plugins and platforms folder
 plugins
 platforms
+res
