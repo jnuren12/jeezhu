@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Hello World</name>
+    <name>Jeezhu</name>
     <description>
-        A basic Framework7 template for PhoneGap.
+        Your Personal Assistant of JNU Zhuhai Life :)
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="jnuren12admin@googlegroups.com" href="http://github.com/jnuren12/jeezhu">
+        JNURen Network Alliance
     </author>
     <content src="index.html" />
     <access origin="*" />

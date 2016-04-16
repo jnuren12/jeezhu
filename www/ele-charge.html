@@ -1,0 +1,37 @@
+
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="back link">
+                <i class="icon icon-back theme-white"></i>
+                <span>Back</span>
+            </a>
+        </div>
+        <div class="center sliding">电费</div>
+        <div class="right">
+            <a href="#" class="link icon-only open-panel theme-white"><i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+  <div data-page="electr" class="page electr">
+      <div class="page-content pull-to-refresh-content">
+          <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+          </div>
+          <div class="content-block">
+            <div class="dollar-pic"><embed src="svg/lightning.svg" width="150px" height="150px"></div>
+            <p>宿舍号：<span id="dorm">1410</span></p>
+            <p>剩余电量：<span id="electr">400</span>度</p>
+            <p>(折合电费<span>300</span>元)</p>
+            <p>预计还可使用<span>356</span>天</p>
+            <p>(以近一周的电使用量为基准作估算)</p>
+          </div>
+          <div class="content-block">
+            <canvas id="Chart_electr" data-type="Bar" width="350" height="350"></canvas>
+          </div>
+      </div>
+  </div>
+</div>

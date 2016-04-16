@@ -9,7 +9,7 @@
             * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
+            -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <!-- Required meta tags-->
@@ -21,7 +21,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Your app title -->
-    <title>My App</title>
+    <title>JZApp</title>
 
     <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -40,11 +40,63 @@
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-        <div class="content-block">
-            <p>Left panel content goes here</p>
+    <div class="panel panel-left panel-cover">
+        <div class="list-block">            
+            <ul>
+                <li>
+                    <a class="item-content item-link close-panel" href="index.html">
+                      <div class="item-media">
+                        <i class="icon icon-bars theme-white"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">HOME</div>
+                      </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link close-panel" href="schedule.html">
+                      <div class="item-media">
+                        <i class="icon icon-bars theme-white"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">课表</div>
+                      </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link close-panel" href="balance.html">
+                      <div class="item-media">
+                        <i class="icon icon-bars theme-white"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">余额</div>
+                      </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link close-panel" href="ele-charge.html">
+                      <div class="item-media">
+                        <i class="icon icon-bars theme-white"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">电费</div>
+                      </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link close-panel" href="zhuhaibus.html">
+                      <div class="item-media">
+                        <i class="icon icon-bars theme-white"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">珠海公交</div>
+                      </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+    
 
     <!-- Views -->
     <div class="views">
@@ -54,42 +106,67 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">Awesome App</div>
+                    <div class="center sliding">HOME</div>
                     <div class="right">
                         <!--
                           Right link contains only icon - additional "icon-only" class
                           Additional "open-panel" class tells app to open panel when we click on this link
                         -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                        <a href="#" class="link icon-only open-panel theme-white"><i class="icon icon-bars"></i></a>
                     </div>
                 </div>
             </div>
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-through toolbar-through">
                 <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
+                <div data-page="home" class="page home">
                     <!-- Scrollable page content -->
-                    <div class="page-content">
+                    <div class="page-content pull-to-refresh-content">
+                        <div class="pull-to-refresh-layer">
+                          <div class="preloader"></div>
+                          <div class="pull-to-refresh-arrow"></div>
+                        </div>
+                        <div class="content-block daily-message">
+                          <div class="row no-gutter">
+                            <div class="col-50">
+                              <p>余额</p>
+                              <p>￥<span>1234.56</span></p>
+                            </div>
+                            <div class="col-50">
+                              <p>电量</p>
+                              <p><span>400</span>kWh</p>
+                            </div>
+                          </div>
+                        </div>
                         <div class="content-block">
-                            <p>Page content goes here</p>
-                            <!-- Link to another page -->
-                            <a href="about.html">About app</a>
+                          <div class="content-block-title">What we can do</div>
+                          <div class="row no-gutter">
+                            <div class="col-33">
+                              <a href="schedule.html"><button><i class="icon-book icon-3x"></i></button></a>
+                              <p>课表</p>
+                            </div>
+                            <div class="col-33">
+                              <a href="balance.html"><button><i class="icon-4x">$</i></button></a>
+                              <p>余额</p>
+                            </div>
+                            <div class="col-33">
+                              <a href="ele-charge.html"><button><i class="icon-bolt icon-4x"></i></button></a>
+                              <p>电费</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="content-block">
+                          <div class="content-block-title">Why we do</div>
+                          <div><p>The App, is designed to serve students in JNU. We found that it's not convenient to get some information related to us; for example, when we want to know the amount of our cards, we may visit websites, or use wechat to inquire, or more terribly from the machine, which involves many operations and costs much time(honestly). So we make it, less operation and better experience.</p></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Bottom Toolbar-->
-            <div class="toolbar">
-                <div class="toolbar-inner">
-                    <!-- Toolbar links -->
-                    <a href="#" class="link">Link 1</a>
-                    <a href="#" class="link">Link 2</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <script type="text/javascript" src="js/cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
 </body>

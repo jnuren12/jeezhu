@@ -10,6 +10,197 @@
    See https://github.com/apache/cordova-plugin-statusbar
 */
 
-.statusbar-overlay {
-    background: #000000;
+body{
+  font-family: "Microsoft YaHei";
 }
+
+.navbar{
+  border-bottom: none;
+  background: #74baee;
+  color: #FCFCFC;
+}
+
+.navbar span{
+  color: #FCFCFC;
+}
+
+
+/* for the left panel */
+.panel{
+  background-color: #7a9dbb;
+}
+
+.panel .list-block{
+  color: #fff;
+}
+
+.panel .list-block ul{
+  background-color: #7a9dbb;
+}
+
+.panel .list-block .item-media:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #c8c7cc;
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+
+/* for the home page */
+.home .page-content .daily-message{
+  border-bottom: 2px solid #E0E0E0;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.home .page-content .daily-message .col-50:nth-child(1){
+  border-right: 2px solid #E0E0E0;
+}
+
+.home .page-content p{
+  text-align: center;
+  font-size: 17px;
+  color: #9D9D9D;
+}
+
+.home .page-content .daily-message p:nth-child(2){
+  font-size: 22px;
+  color: #74baee;
+}
+
+.home .page-content .content-block .content-block-title{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.home .page-content .content-block:nth-last-child(2) a{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  text-decoration: none;
+}
+
+.home .page-content .content-block:nth-last-child(2) .col-33 button{
+  border-radius: 100%;
+  box-shadow: none;
+  border: none;
+  width: 80px;
+  height: 80px;
+}
+
+.home .page-content .content-block:nth-last-child(2) .col-33:nth-child(1) button{
+  background-color: #00CACA;
+}
+
+.home .page-content .content-block:nth-last-child(2) .col-33:nth-child(2) button{
+  background-color: #FF8000;
+}
+
+.home .page-content .content-block:nth-last-child(2) .col-33:nth-child(3) button{
+  background-color: #00DB00;
+}
+
+.home .page-content .content-block:nth-last-child(2) button i{
+  color: white;
+}
+
+.home .page-content .content-block:nth-last-child(1){
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.home .page-content .content-block:nth-last-child(1) p{
+  text-align: left;
+}
+
+
+/* for the balance page */
+.balance .page-content .content-block:nth-child(1){
+  margin-top: 0px;
+}
+
+.balance .page-content .content-block .dollar-pic{
+  width: 200px;
+  margin: auto;
+}
+
+.balance .page-content .content-block p{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.balance .page-content .content-block .amount{
+  text-align: center;
+  font-size: 40px;
+}
+/*
+#flash{
+  background-color: black;
+  opacity: 0;
+  z-index: 99;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin-top: 25px;
+  right: 15px;
+}
+*/
+
+
+/* for the ele-charge page */
+.electr .page-content .content-block .dollar-pic{
+  width: 150px;
+  margin: auto;
+}
+
+.electr .page-content .content-block p{
+  text-align: center;
+  font-size: 20px;
+}
+
+.electr .page-content .content-block p:nth-last-child(1){
+  color: #9D9D9D;
+  font-size: 15px;
+  margin-top: -15px;
+}
+
+.electr .page-content .content-block p:nth-last-child(3){
+  color: #9D9D9D;
+  font-size: 15px;
+  margin-top: -15px;
+}
+
+.electr .page-content .content-block span{
+  font-size: 28px;
+}
+
+.electr .page-content .content-block .amount{
+  text-align: center;
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
