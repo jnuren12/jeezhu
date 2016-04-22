@@ -103,40 +103,64 @@
     <div class="views">
         <!-- main view -->
         <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">HOME</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel theme-white"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
             <!-- Pages container -->
             <div class="pages navbar-through toolbar-through">
                 <!-- Page, "data-page" contains page name -->
-                <div class="page">
-                  <div class="page-content login-screen-content">
-                    <div class="login-screen-title">Jeezhu</div>
-                    <form>
-                      <div class="list-block">
-                        <ul>
-                          <li class="item-content">
-                            <div class="item-inner">
-                              <div class="item-title label">Username</div>
-                              <div class="item-input">
-                                <input type="text" name="username" placeholder="Your username">
-                              </div>
+                <div data-page="home" class="page home">
+                    <!-- Scrollable page content -->
+                    <div class="page-content pull-to-refresh-content">
+                        <div class="pull-to-refresh-layer">
+                          <div class="preloader"></div>
+                          <div class="pull-to-refresh-arrow"></div>
+                        </div>
+                        <div class="content-block daily-message">
+                          <div class="row no-gutter">
+                            <div class="col-50">
+                              <p>余额</p>
+                              <p>￥<span>1234.56</span></p>
                             </div>
-                          </li>
-                          <li class="item-content">
-                            <div class="item-inner">
-                              <div class="item-title label">Password</div>
-                              <div class="item-input">
-                                <input type="password" name="password" placeholder="Your password">
-                              </div>
+                            <div class="col-50">
+                              <p>电量</p>
+                              <p><span>400</span>kWh</p>
                             </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="list-block">
-                        <ul>
-                          <li><a href="home.html" class="item-link list-button external">Sign In</a></li>
-                        </ul>
-                      </div>
-                    </form>
-                  </div>
+                          </div>
+                        </div>
+                        <div class="content-block">
+                          <div class="content-block-title">What we can do</div>
+                          <div class="row no-gutter">
+                            <div class="col-33">
+                              <a href="schedule.html"><button><i class="icon-book icon-3x"></i></button></a>
+                              <p>课表</p>
+                            </div>
+                            <div class="col-33">
+                              <a href="balance.html"><button><i class="icon-4x">$</i></button></a>
+                              <p>余额</p>
+                            </div>
+                            <div class="col-33">
+                              <a href="ele-charge.html"><button><i class="icon-bolt icon-4x"></i></button></a>
+                              <p>电费</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="content-block">
+                          <div class="content-block-title">Why we do</div>
+                          <div><p>The App, is designed to serve students in JNU. We found that it's not convenient to get some information related to us; for example, when we want to know the amount of our cards, we may visit websites, or use wechat to inquire, or more terribly from the machine, which involves many operations and costs much time(honestly). So we make it, less operation and better experience.</p></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -145,7 +169,6 @@
     <script type="text/javascript" src="js/Chart.js"></script>
     <script type="text/javascript" src="js/cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/welcomescreen.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
     
 

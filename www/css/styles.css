@@ -24,6 +24,12 @@ body{
   color: #FCFCFC;
 }
 
+.icon-sort-down{
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 9px;
+  margin-left: 4px;
+}
 
 /* for the left panel */
 .panel{
@@ -148,18 +154,6 @@ body{
   text-align: center;
   font-size: 40px;
 }
-/*
-#flash{
-  background-color: black;
-  opacity: 0;
-  z-index: 99;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  margin-top: 25px;
-  right: 15px;
-}
-*/
 
 
 /* for the ele-charge page */
@@ -193,6 +187,20 @@ body{
   text-align: center;
   font-size: 40px;
 }
+
+
+/* welcomescreen */
+.tutorialicon {
+  font-size: 250px;
+  line-height: 170px;
+}
+
+.welcomescreen-container .welcomescreen-text a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+
 
 
 
